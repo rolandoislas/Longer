@@ -1,0 +1,6 @@
+The following are third-party tools used in Longer.
+
+Bumpkit
+https://github.com/DataDink/Bumpkit - https://www.nuget.org/packages/Bumpkit/
+License: http://opensource.org/licenses/ms-pl.html
+Version: 1.0.2
