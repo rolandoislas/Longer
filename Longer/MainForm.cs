@@ -58,7 +58,6 @@ namespace Longer {
                 this.Invoke(d, new object[] { sender, e });
             } else {
                 this.progressBar.Value = ((ProgressUpdateEventArgs)e).progress;
-                Console.WriteLine(((ProgressUpdateEventArgs)e).progress);
             }
         }
 
@@ -69,12 +68,10 @@ namespace Longer {
                 if (!result.Equals(DialogResult.OK))
                     return;
                 new Thread(() => gif.create(int.Parse(textBoxYear.Text), int.Parse(textBoxStep.Text), browse.SelectedPath, 1280, 720)).Start();
-                //new Thread(() => gif.create(1, 100000, browse.SelectedPath, 1280, 720)).Start();
             }
         }
 
         private bool isInputValid() {
-            return true; // dev
             if (textBoxYear.Text.Equals("") || !textBoxYear.Text.All(Char.IsDigit) || int.Parse(textBoxYear.Text) == 0)
                 return false;
             if (textBoxStep.Text.Equals("") || !textBoxStep.Text.All(Char.IsDigit) || int.Parse(textBoxStep.Text) == 0)
